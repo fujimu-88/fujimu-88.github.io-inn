@@ -1,0 +1,220 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>奈良温泉若草山温泉旅館</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+
+<script type="text/javascript" src="script/script.js"></script>
+</head>
+
+<body>
+  <!-- ローディング画面 -->
+  <div class="loader">
+    <div class="animation">
+      <p>LOADING</p>
+    </div>
+
+  </div>
+    
+<header id="header">
+  <h1><a href="index.html">奈良温泉<br>
+      <span>若草山温泉旅館</span></a></h1>
+  <div id="header_nav">
+    <div class="nav_sub">
+      <ul>
+        <li class="non-tb"><a href="tel:0745000000">TEL</a></li>
+        <li class="non-tb"><a href="#access">アクセス</a></li>
+        <li class="non-tb"><a href="#search">空室検索</a></li>
+        <li class="non-tb"><a href="index.html">トップ</a></li>
+      </ul>
+    </div>
+      <div class="nav_sub_tb">
+        <ul class="non-sp">
+          <li><a href="#tel_no">お問い合わせ</a></li>
+          <li><a href="#access">アクセス</a></li>
+        </ul>
+      </div>
+      <nav id="global_nav" class="non-sp">
+        <ul>
+          <li><a href="#about_ryokan">当旅館について</a></li>
+          <li><a href="hotspring.html">温泉</a></li>
+          <li><a href="our_food.html">お食事</a></li>
+          <li><a href="guest_room.html">客室</a></li>
+          <li><a href="news.html">お知らせ</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="slideGalley">
+        <div id="slide">
+            <img src="img/top_img1_sp.jpg" width="980" height="400" alt="若草山からの奈良市内の風景">
+            <img src="img/top_img2_sp.jpg" width="980" height="400" alt="若草山からの奈良市内の風景"> 
+            <img src="img/top_img3_sp.jpg" width="980" height="400" alt="若草山からの奈良市内の風景">
+        </div>
+        <ul id="paging"></ul>
+    </div>
+</header>
+<main id="main">
+  <article>
+    <section id="search">
+        <div id="search_w">
+          <h2>空室検索</h2>
+          <form action="#" method="post" id="vacancy_search" accept-charset="UTF-8">
+            <table>
+              <tbody>
+                <tr id="thead">
+                  <th scope="col"><label for="date">ご宿泊日</label></th>
+                  <th scope="col"><label for="stays">泊数</label></th>
+                  <th scope="col"><label for="people">人数<small><br class="non-tb">（１室あたり） </small>                 </label></th>
+                  <th scope="col"><label for="rooms">部屋数</label></th>
+                </tr>
+                <tr>
+                  <td id="text"><input name="date" type="date" required="required" id="date"></td>
+                  <td><select name="stays" required="required" id="stays">
+                      <option value="1">1泊</option>
+                      <option value="2">2泊</option>
+                      <option value="3">3泊</option>
+                      <option value="4">4泊</option>
+                      <option value="5">5泊</option>
+                    </select></td>
+                  <td><select name="people" required="required" id="people">
+                      <option value="1">1人</option>
+                      <option value="2">2人</option>
+                      <option value="3">3人</option>
+                      <option value="4">4人</option>
+                      <option value="5">5人</option>
+                    </select></td>
+                  <td><select name="rooms" required="required" id="rooms">
+                      <option value="1">1室</option>
+                      <option value="2">2室</option>
+                      <option value="3">3室</option>
+                    </select></td>
+                    
+                </tr>
+              </tbody>
+            </table>
+              <p id="submit"><input type="submit" value="検&nbsp;&nbsp;索"></p>
+          </form>
+          <div id="under">
+            <div id="under_text">
+              <p>お電話でのご予約も承っております。</p>
+            
+              <ul id="tel">
+                <li><a href="tel:0745000000">TEL&nbsp;0745-00-0000</a></li>
+                <li>電話受付時間&nbsp;9：00～20：00</li>
+              </ul>
+            </div>
+        </div>
+      </div>
+    </section>
+    <section>
+        <div id="about_ryokan">
+          <h2 class="opacity_text">当旅館について</h2>
+            <div id="comment"  class="opacity_text">
+                <p>若草山温泉旅館で過ごす万葉ロマンあふれる、奈良での癒しのひととき<br>
+                わたくしども若草山温泉旅館は、従業員一同「おもてなしの心」を何よりも大切に思っております。<br>
+                奈良を訪れて良かったとご満足いただけるサービスを心がけ、一歩一歩精進して参ります。 </p>
+            </div>
+        </div>
+    </section>
+    <section class="odd">
+        <div id="fadein1">
+          <p><img src="img/onsen.jpg" width="499" height="500" alt="露天風呂"/></p>
+          <div class="text">
+            <h3>温泉</h3>
+            <p>平城宮後地の一角から湧き出るお湯を使用しており温泉に含まれる炭酸水素塩泉は「美人の湯」と称されるほどの美白効果があります。<br>
+              <a href="hotspring.html">&lt;&lt;詳しくはこちら</a>
+              </p>
+            </div> 
+        </div>
+    </section>
+    <section class="even">
+        <div id="fadein2">
+          <p><img src="img/dinner.jpg" width="500" height="500" alt="奈良野菜や三重県の松坂牛を使用した料理"/></p>
+              <div class="text">
+                <h3>お食事</h3>
+                  <p>鎌倉時代からの銘牛大和牛の他、地元・奈良のお米はもちろんのこと大和野菜を使用した旬の素材をご堪能ください。<br>
+                    <a href="our_food.html">&lt;&lt;詳しくはこちら</a>
+                  </p>
+                
+            </div>
+      </div>
+    </section>
+    <section class="odd">
+        <div id="fadein3">
+                <p><img src="img/room.jpg" width="500" height="500" alt="ツインのお部屋"/></p>
+              <div class="text">
+                <h3>客室</h3>
+                <p>大和情緒あふれる、い草の香り漂う静かな客室です。<br>
+                  各客室は若草山からの古都奈良の美しい景色をお楽しみいただけます。<br>
+                  <a href="guest_room.html">&lt;&lt;詳しくはこちら</a></p>
+            </div>
+      </div>
+      
+    </section>
+    <section id="osirase">
+      <h3>お知らせ</h3>
+      <ul>
+        <li><a href="news_individual.html#news1">2023.01.01&nbsp;&nbsp;若草山山焼きについて</a></li>
+        <li><a href="news_individual.html#news2">2022.12.15&nbsp;&nbsp;外装工事について</a></li>
+        <li><a href="news_individual.html#news3">2020.05.01&nbsp;&nbsp;新型コロナウィルスへの対応</a></li>
+        <li><a href="news_individual.html#news4">2020.04.02&nbsp;&nbsp;営業再開について</a></li>
+      </ul>
+      <p><a href="news.html">一覧を見る</a></p>
+    </section>
+  </article>
+  <aside id="access">
+      <div id="access_c">
+        <h2>交通アクセス</h2>
+          <div id="access_text">
+            <p><span>近鉄奈良から徒歩20分</span></p>
+            <p>東大寺や奈良公園などの有名な観光スポットへのアクセスも良いため、奈良の観光に最適です。<br>
+              奈良へご旅行の際は、ぜひ当館をご利用ください。<br>
+                お車でお越しの際は道路に飛び出す鹿にご注意ください。</p>
+          </div>
+          <div id="map">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.6799792333127!2d135.83171251462082!3d34.68802549140581!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6001398446c8c32f%3A0x6724434117746ebc!2z44CSNjMwLTgyNzQg5aWI6Imv55yM5aWI6Imv5biC5YyX5Y2K55Sw5p2x55S677yR!5e0!3m2!1sja!2sjp!4v1580796536072!5m2!1sja!2sjp"  height="300" frameborder="0" style="border:0;" allow="fullscreen"></iframe>
+          </div>
+      </div>
+      
+  </aside>
+</main>
+<footer id="footer">
+  <ul>
+    <li><a href="#search">空室検索</a></li>
+  </ul>
+    <div id="address">
+        <div class="address">
+          <p>〒630-8274 奈良市北半田東町1</p>
+        </div>
+        
+        <div id="tel_no">
+          <p><a href="tel:0745000000">TEL&nbsp;0745-00-0000</a></p>
+        </div>
+      <p id="tel_t">電話受付時間&nbsp;9：00～20：00</p>
+    </div>
+    <div id="up">
+      <p class="non-sp"><a href="#header">ページトップ↑</a></p>
+    </div>
+    <div id="copyright">
+      <p><small>Copyright &copy; 2020 WAKAKUSAYAMAONSEN. <br class="non-tb">All Rright Reserved.</small></p>
+    </div>
+</footer>
+<script type="text/javascript">
+  //jqueryと異なるためここに記述
+  //空き状況検索formの日付デフォルト変更
+
+  var today = new Date();
+  var year = today.getFullYear();
+  //2桁を取得slice()
+  var month = ("0" + (today.getMonth() + 1)).slice(-2);
+  var day = ("0" + today.getDate()).slice(-2);
+
+  document.getElementById("date").value = year + '-' + month + '-' + day;
+
+</script>
+</body>
+</html>
+

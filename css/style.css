@@ -1,0 +1,866 @@
+@charset "utf-8";
+*   {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	text-decoration: none;
+	font-family: "ＭＳ Ｐ明朝", "MS PMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", serif;
+	color: #FFFFFF;
+	background-color: #333;
+}
+img{
+    vertical-align: bottom;
+    height: auto;
+}
+/*スマートフォン用非表示クラス*/
+.non-sp{
+    display: none;
+}
+
+/*ローディング*/
+.loader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 10000;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.animation p{
+    background-color: #FFF;
+    color: #333;
+    font-size: 2em;
+}
+/* アニメーション */
+.animation {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-animation: loadinganimation 1500ms ease-out forwards infinite;
+    animation: loadinganimation 2000ms ease-out forwards infinite;
+}
+@keyframes loadinganimation {
+    from,to {
+        opacity: 0;
+    }
+    50% {
+        opacity: .5;
+    }
+}
+
+
+/*スマートフォン用表示ここから*/
+#header{
+    height: 100vh;
+}
+#header h1 ,#header h1 a ,#header h1 span{
+    background-color: transparent;
+}
+#header h1, #header_sub h1{
+    width: 250px;
+    top: 30px;
+    left: 10px;
+    font-size: 1em;
+    position: absolute;
+    z-index: 100;
+}
+#header h1 span ,#header_sub h1 span{
+    font-size: 1.7em;
+}
+/*スマートフォン用表示デザイン*/
+
+.nav_sub {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 10000;
+    display: none;
+}
+.nav_sub ul li{
+    width: 24.99%;
+    float: left;
+    text-align: center;
+    background-color: #FFF;
+}
+.nav_sub li a{
+    display: block;
+    height: 45px;
+    line-height: 3rem;
+    border-right: solid 1px #000;
+    background-color: #FFF;
+    color: #000;
+}
+#header img{
+    max-width: 100%;
+    height: auto;
+}
+/*スライドギャラリー*/
+
+#slideGalley{
+    clear: both;
+    position:relative;
+}
+#slide img{
+    position:absolute;
+    left:0;
+    top:0;
+    text-align: center;
+    height: 100vh;
+    object-fit: cover;
+}
+
+/** 検索 */
+
+#search ,#search_w ,#search h2 , #search form, #search table ,#search tbody ,#search label , #search input ,#search select ,#search th ,#search td ,#search tr ,#search small ,#search p ,#search #under ,#search ul ,#search ul li ,#search ul li a {
+    background-color: #FFF;
+    color: #000;
+    overflow: auto;
+    border: #fff;
+}
+
+#search h2{
+    margin-top: 40px;
+    text-align: center;
+}
+#vacancy_search{
+    width: 350px;
+    margin: 20px auto;
+}
+#search table{
+    width: 350px;
+}
+#search table tr{
+    display: block;
+    float: left;
+}
+#search table tr th,#search tr td{
+    display: block;
+    height: 65px;
+    text-align: center;
+    font-size: 1.2em;
+}
+#search tr td{
+    margin-left: 10px;
+}
+
+#search #text input{
+    border: solid 1px #000;
+    width: 170px;
+    height: 35px;
+    font-size: 1em;
+}
+#search select{
+    border: solid 1px #000;
+    padding: 5px 10px;
+    width: 170px;
+    height: 35px;
+    font-size: 1em;
+}
+#search #submit{
+    text-align: center;
+}
+#search #submit input {
+    width: 250px;
+    height: 35px;
+    background-color: #a22;
+    border: solid 1px #000;
+    padding: 7px 10px;
+    font-size: 1em;
+    text-align: center;
+}
+#under #under_text {
+    margin: 20px auto;
+    text-align: center;
+}
+
+
+#under #tel li{
+    clear: left; 
+    width: 100%;
+    text-align: center;
+    padding-bottom: 15px;
+}
+#under #tel li:first-child{
+    font-size: 1.8rem;
+}
+
+/** フェードイン用 */
+.opacity_text, .sub_opacity_text ,#fadein1 ,#fadein2 ,#fadein3{
+    opacity: 0;
+}
+/** 各コンテンツ　各ページ共通 */
+
+#about_ryokan, #about_contents{
+    width: 80%;
+    margin: 140px auto;
+}
+
+#about_ryokan h2, #about_contents h2, #news h2, #news_article h2{
+    text-align: center;
+    margin-top: 30%;
+}
+
+#about_ryokan #comment, #about_contents #comment{
+    margin-top: 20px;
+    line-height: 2.2rem;
+}
+
+.odd ,.even {
+    width: 70%;
+    margin: 15px auto;
+    z-index: 1000;
+}
+
+.odd p ,.even p{
+    text-align: center
+}
+.text{
+    width: 90%;
+    margin: 40px auto;
+    padding-bottom: 20px;
+    line-height: 2.2rem;
+}
+.text h3{
+    text-align: center;
+    margin: 20px 0;
+}
+
+.odd .text p ,.even .text p{
+    text-align: left;
+}
+.odd img,.even img{
+    width: 100%;
+}
+
+#osirase{
+    max-width: 370px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#osirase h3{
+    margin-bottom: 30px;
+    text-align: center;
+}
+#osirase ul li{
+    margin: 20px 0;
+}
+#osirase p{
+    width: 250px;
+    text-align: center;
+    margin: 50px auto;
+    border: solid 1px #FFF;
+}
+#osirase p a{
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#access ,#access h2, #access_c ,#access #access_text, #access p, #access span{
+    background-color: #FFF;
+    color: #000;
+}
+#access h2{
+    padding: 30px 0;
+    text-align: center;
+}
+#access_text{
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+#map{
+    background-color: #FFF;
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+#map iframe{
+    width:100%;
+}
+#footer {
+    width: 80%;
+    margin: 0 auto;
+}
+#sub_footer{
+    margin-top: 100px;
+}
+#footer ul li{
+    margin: 20px 0;
+    text-align: center;
+}
+#footer ul li:first-child{
+    padding: 5px 10px;
+    background-color: #811;
+    border: solid 1px #000;
+    color: #FFF;
+}
+#footer ul li:first-child a{
+    background-color: #811;
+    display: block;
+}
+
+#footer p{
+    margin: 15px 0;
+}
+#tel_no{
+    font-size: 1.5rem;
+}
+#footer #up{
+    display: none;
+}
+#footer #copyright{
+    text-align: center;
+    padding-bottom: 45px;
+}
+
+
+/** news.html */
+
+#news{
+    width: 340px;
+    margin: 140px auto;
+}
+#news_article{
+    width: 80%;
+    margin: 140px auto;
+}
+#news_list{
+    width: 340px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 3rem;
+    overflow: hidden;
+}
+.pageWrap{
+    width: 680px;
+}
+.page{
+    width: 340px;
+    float: left;
+}
+.prev{
+    float: left;
+    margin-top: 20px;
+}
+.next{
+    float: right;
+    margin-top: 20px;
+}
+
+
+/** news_individual.html */
+#news_article{
+    width: 340px;
+    height: 400px;
+    margin: 20px auto;
+}
+
+#news_article h2{
+    text-align: center;
+    margin-top: 40%;
+}
+
+#news1, #news2, #news3, #news4, #news5, #news6{
+    display: none;
+}
+.news_title{
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.4;
+    margin-top: 20px;
+}
+.news_comment{
+    width: 300px;
+    margin: 20px auto;
+    line-height: 1.4;
+}
+
+
+
+@media screen and (min-width:768px){
+    .non-sp{
+        display: inline;
+    }
+    .non-tb{
+        display: none;
+    }
+    #header {
+        height: 100%;
+    }
+    #header h1 ,#header h1 a ,#header h1 span{
+        background-color: #333;
+        position: static;
+    }
+    #header h1 {
+        float: left;
+        width: 28%;
+        height: auto;
+        font-size: 1.2em;
+        margin: 10px 15px;
+        line-height: 1.8em;
+    }
+    #header h1 span, #header_sub h1 span{
+        font-size: 1.5em;
+        line-height: normal;
+    }
+    #header_nav{
+        width: 65%;
+        float: right;
+        margin-right: 15px;
+        background-color: #333;
+    }
+    #header_nav ul{
+        overflow: hidden;
+    }
+    #header img{
+        width: 100%;
+    }
+    .nav_sub_tb {
+        display: block;
+        position: static;
+        float: right;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        overflow: hidden;
+        padding: 10px 5px;
+        font-size: 1.2rem;
+        text-align: right
+    }
+    .nav_sub_tb ul li {
+        float: left;
+        padding-left: 15px;
+        background-color: #333;
+    }
+    #global_nav{
+        clear: both;
+        float: right;
+        font-size: 1.2rem;
+    }
+    #global_nav ul li {
+        float: left;
+        padding-left: 30px;
+        margin-bottom: 15px;
+    }
+    /*スライドギャラリー*/
+    #slideGalley{
+        overflow: hidden;
+        height: 95vh;
+    }
+    main{
+        width: 100%;
+        overflow: hidden;
+    }
+    /* 検索 */
+    #search{
+        width: 100%;
+        padding: 30px 0;
+        background-color: #FFF;
+    }
+    #search_w{
+        width: 720px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #tel a[href^="tel:"] {
+        pointer-events:none;
+    }
+    #search h2{
+        width: 120px;
+        margin-top: 50px;
+        text-align: center;
+        float: left;
+        font-size: 1.2rem;
+    }
+    #vacancy_search{
+        float: left;
+        width: 600px;
+        margin: 0 0;
+    }
+    #search table{
+        float: left;
+        width: 500px;
+        height: 85px;
+    }
+    #search table tr{
+        display: table-row;
+        float: none;
+    }
+    #search table tr th{
+        display: table-cell;
+        height: 50%;
+        text-align: center;
+    }
+    #search tr td{
+        display: table-cell;
+        height: 50%;
+        text-align: center;
+        font-size: 0.9em;
+    }
+    #search tr th small{
+        font-size: 0.7em;
+    }
+
+    #search #text input{
+        border: solid 1px #000;
+        width: 100px;
+        font-size: 0.9em;
+    }
+    #search select{
+        border: solid 1px #000;
+        padding: 5px 10px;
+        width: 100px;
+    }
+    #search #submit{
+        float: left;
+        margin-top: 45px;
+        padding: 0;
+    }
+    #search #submit input {
+        width: 80px;
+        padding: 6px 10px;
+    }
+
+    #under {
+        clear: both;
+        margin-top: 20px;
+    }
+    #under #under_text {
+        width: 550px;
+        margin: 0 auto;
+    }
+    #under #under_text p{
+        float: left;
+        width: 50%;
+        padding-top: 15px;
+    }
+
+    #under #tel{
+        float: left;
+        width: 50%;
+    }
+    #under #tel li{ 
+        text-align: left;
+        padding-bottom: 0px;
+    }
+    #under #tel li:first-child {
+        font-size: 1.5em;
+    }
+    /*各コンテンツ　各ページ共通*/
+    #about_ryokan, #about_contents{
+        clear: left;
+        overflow: hidden;
+    }
+    #about_ryokan h2, #about_contents h2{
+        line-height: 5em;
+        margin-top: auto;
+    }
+    #about_ryokan #comment, #about_contents #comment{
+        width: 80%;
+        margin: auto;
+        padding-bottom: 50px;
+        font-size: 1.1em;
+        line-height: 1.8em;
+    }
+    #news_list{
+        width: 410px;
+        font-size: 1.1em;
+    }
+    .odd ,.even {
+        width: 100%;
+        margin: 0 ;
+        overflow: hidden;
+    }
+    .text{
+        width: 50%;
+        margin: 0;
+        padding-bottom: 0px;
+        font-size: 1.1em;
+        line-height: 2rem;
+    }
+    .odd .text{
+        float: right;
+    }
+    .even .text{
+        float: left;
+    }
+    .text h3{
+        text-align: center;
+        margin: 75px 0;
+    }
+    .text p{
+        width: 75%;
+        margin: 0 auto;
+        line-height: 2em;
+    }
+    .odd p img {
+        max-width: 50%;
+        float: right;
+        height: auto;
+    }
+    .even p img{
+        max-width: 50%;
+        float: left;
+        height: auto;
+    }
+    #osirase  {
+        clear: both;
+        float: none;
+        width: 450px;
+    }
+    #osirase h3{
+        margin: 60px 0;
+        font-size: 1.8rem;
+    }
+    #osirase ul{
+        width: 420px;
+    }
+    #osirase ul li {
+        padding-bottom: 20px;
+    }
+    #osirase ul li a{
+        font-size: 1.2rem;
+    }
+    #osirase {
+        font-size: 1.3rem;
+        margin:  0 auto;
+        padding: 10px 0;
+    }
+    #access, #access_c, #access h2, #access #access_text, #access p, #access span{
+        background-color: #FFF;
+        color: #000;
+    }
+    #access_c{
+        width: 100%;
+        overflow: hidden;
+    }
+    #access h2{
+        padding: 30px 0;
+        text-align: center;
+    }
+    #access_text{
+        width: 50%;
+        float: left;
+        padding: 0 0;
+    }
+    #access #access_text p{
+        width: 80%;
+        margin: 0 auto;
+        line-height: 1.8em;
+        padding-top: 20px;
+    }
+    #access #access_text span{
+        display: block;
+        font-size: 1.6rem;
+        text-align: center;
+    }
+    #map{
+        float:left;
+        width: 45%;
+        height: auto;
+        margin: 0 auto;
+        padding: 0 10px;
+        padding-bottom: 40px;
+    }
+    #map iframe{
+        width:100%;
+    }
+    #footer {
+        clear: left;
+        width: 95%;
+        margin: 20px auto;
+    }
+    
+    #footer ul{
+        width: 65%;
+        float: left;
+    }
+    #footer ul li{
+        width: 28%;
+        margin: 0px 5px;
+        text-align: center;
+        float: left;
+    }
+    #footer ul li:first-child{
+        padding: 5px 10px;
+        background-color: #811;
+        border: solid 1px #000;
+        color: #FFF;
+    }
+    #footer ul li:first-child a{
+        background-color: #811;
+    }
+    #address {
+        float: right;
+        text-align: right;
+    }
+    #footer p{
+        margin: 0;
+        overflow: hidden;
+    }
+    #tel_no,#tel_t{
+        padding-top: 15px;
+    }
+    #tel_no a[href^="tel:"] {
+        pointer-events:none;
+    }
+    #footer #up{
+        bottom: 20px;
+        right: 25px;
+        width: 150px;
+        border: solid 2px #FFF;
+        border-radius: 5px;
+        position: fixed;
+    }
+    #footer #up p {
+        margin: 0;
+        background-color: #811;
+        font-size: 1.2rem;
+        border-radius: 5px;
+        display: block;
+        height: 30px;
+        text-align: center;
+    }
+    #footer #up p a{
+        line-height: 1.8rem;
+        background-color: #811;
+    }
+    #footer #copyright{
+        padding-top: 30px;
+        padding-bottom: 0;
+        clear: both;
+    }
+
+    /** news.html */
+    #news{
+        width: 420px;
+    }
+    #news_list{
+        width: 420px;
+    }
+    .page{
+        width: 420px;
+        margin-left: 1px;
+    }
+    .pageWrap{
+        width: 842px;
+    }
+
+
+    /** news_individual.html */
+
+    #news_article{
+        width: 60%;
+        height: 60vh;
+        font-size: 1.1em;
+    }
+    #news_article h2{
+        text-align: center;
+        margin-top: 20%;
+    }
+    .news_comment{
+        width: 100%;
+    }
+}
+@media screen and (min-width:1024px){
+
+    #header img{
+        width: 100%;
+    }
+    #slideGalley{
+        height: 90vh;
+    }
+
+    #search_w{
+        width: 960px;
+        margin: 0 auto;
+    }
+    #search h2{
+        width: 150px;
+        text-align: center;
+        font-size: 1.2rem;
+    }
+    #vacancy_search{
+        width: 800px;
+    }
+    #search table{
+        width: 650px;
+    }
+    #search tr td{
+        font-size: 1.1em;
+    }
+    #search #text input{
+        width: 130px;
+    }
+    #search select{
+        width: 120px;
+    }
+    #search #submit input {
+        width: 120px;
+    }
+    #under #under_text {
+        width: 700px;
+    }
+    #under #under_text p{
+        padding-top: 30px;
+    }
+    #under #tel{
+        padding-top: 15px;
+    }
+    
+    #about_ryokan #comment, #about_contents #comment{
+        width: 50%;
+    }
+    .text h3{
+        font-size: 1.8em;
+        margin: 70px 0;
+        padding: 50px 0;
+    }
+    .text p{
+        width: 70%;
+        font-size: 1.2em;
+        line-height: 2.2em;
+    }
+    .odd p img {
+        width: 50%;
+    }
+    .even p img{
+        width: 50%;
+    }
+    #access_c {
+        width: 85%;
+        margin: 0 auto;
+    }
+    #access h2{
+        padding: 60px 0;
+        font-size: 1.8rem;
+    }
+    #access_text{
+        width: 50%;
+    }
+    #access #access_text p{
+        width: 65%;
+    }
+    #footer ul{
+        width: 60%;
+    }
+    #footer ul li{
+        width: 25%;
+    }
+    #footer ul li:first-child{
+        font-size: 1.2rem;
+    }
+
+    #footer #address p{
+        padding-bottom: 10px;
+    }
+}
