@@ -91,7 +91,17 @@ function newsListTablet(){
     });
 };
 
+$(function(){
+    var w = $(window).width();
+    if( w <= 768){
+        //windowサイズ768以下でお知らせ一覧の.next,.prev動作　関数
+        newsListSmartPhone();
+    }else if( w >= 768){
+        //windowサイズ768以以上でお知らせ一覧の.next,.prev動作　関数
+        newsListTablet();
+    }
 
+});
 /*ヘッダー画像　windowサイズを変更したときpcサイズでもスマホ用画像に変わらないように*/
 $(window).ready(function () {
     // 実行したい処理
@@ -105,9 +115,6 @@ $(window).ready(function () {
         //windowサイズ768以下で固定メニューの動作　関数
         smartPhoneMenu();
 
-        //windowサイズ768以下でお知らせ一覧の.next,.prev動作　関数
-        newsListSmartPhone();
-
     }else if( w >= 768){
         //横幅768px以上の時
         
@@ -119,9 +126,6 @@ $(window).ready(function () {
         //windowサイズ768px以上でトップへ戻るの動作　関数
         tabletUp();
 
-        //windowサイズ768以以上でお知らせ一覧の.next,.prev動作　関数
-        newsListTablet();
-
     };
 });
 
@@ -130,8 +134,6 @@ $(window).resize(function () {
     // 実行したい処理
     var w = $(window).width();
     if( w <= 768){
-        //news.htmlのお知らせリストのnextとprevをクリックしたとき
-
 
         //windowサイズ768以下で固定メニューの動作　関数
         smartPhoneMenu();
@@ -141,12 +143,11 @@ $(window).resize(function () {
 
     }else if( w >= 768){
         
+        //windowサイズ768px以上でトップへ戻るの動作　関数
+        tabletUp();
 
-    //windowサイズ768px以上でトップへ戻るの動作　関数
-    tabletUp();
-
-    //windowサイズ768以以上でお知らせ一覧の.next,.prev動作　関数
-    newsListTablet();
+        //windowサイズ768以以上でお知らせ一覧の.next,.prev動作　関数
+        newsListTablet();
 
     }
 })
