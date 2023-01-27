@@ -93,20 +93,21 @@ function newsListTablet(){
 
 $(function(){
     var w = $(window).width();
-    if( w <= 768){
+    if( w < 768){
         //windowサイズ768以下でお知らせ一覧の.next,.prev動作　関数
         newsListSmartPhone();
     }else if( w >= 768){
         //windowサイズ768以以上でお知らせ一覧の.next,.prev動作　関数
         newsListTablet();
     }
-
 });
+
+
 /*ヘッダー画像　windowサイズを変更したときpcサイズでもスマホ用画像に変わらないように*/
 $(window).ready(function () {
     // 実行したい処理
     var w = $(window).width();
-    if( w <= 768){
+    if( w < 768){
         //横幅768px未満の時
         $("#slide img").each(function(){
             $(this).attr("src",$(this).attr("src").replace("_tb","_sp"));
@@ -133,7 +134,7 @@ $(window).ready(function () {
 $(window).resize(function () {
     // 実行したい処理
     var w = $(window).width();
-    if( w <= 768){
+    if( w < 768){
 
         //windowサイズ768以下で固定メニューの動作　関数
         smartPhoneMenu();
