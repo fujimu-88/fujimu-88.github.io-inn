@@ -61,6 +61,37 @@ function tabletUp(){
 
 
 
+//windowサイズ768以下でお知らせ一覧の.next,.prev動作　関数化
+function newsListSmartPhone(){
+    $(".next").click(function(){
+        $("#news_list .pageWrap").animate({
+            "margin-left" : parseInt($("#news_list .pageWrap").css("margin-left"))-340+"px"
+        },400);
+    })
+    
+    $(".prev").click(function(){
+        $("#news_list .pageWrap").animate({
+            "margin-left" : parseInt($("#news_list .pageWrap").css("margin-left"))+340+"px"
+        },400);
+    });
+};
+
+//windowサイズ768px以上でお知らせ一覧の.next,.prev動作　関数化
+function newsListTablet(){
+    $(".next").click(function(){
+        $("#news_list .pageWrap").animate({
+            "margin-left" : parseInt($("#news_list .pageWrap").css("margin-left"))-420+"px"
+        },400);
+    })
+    
+    $(".prev").click(function(){
+        $("#news_list .pageWrap").animate({
+            "margin-left" : parseInt($("#news_list .pageWrap").css("margin-left"))+420+"px"
+        },400);
+    });
+};
+
+
 /*ヘッダー画像　windowサイズを変更したときpcサイズでもスマホ用画像に変わらないように*/
 $(window).ready(function () {
     // 実行したい処理
@@ -74,6 +105,9 @@ $(window).ready(function () {
         //windowサイズ768以下で固定メニューの動作　関数
         smartPhoneMenu();
 
+        //windowサイズ768以下でお知らせ一覧の.next,.prev動作　関数
+        newsListSmartPhone();
+
     }else if( w >= 768){
         //横幅768px以上の時
         
@@ -85,6 +119,9 @@ $(window).ready(function () {
         //windowサイズ768px以上でトップへ戻るの動作　関数
         tabletUp();
 
+        //windowサイズ768以以上でお知らせ一覧の.next,.prev動作　関数
+        newsListTablet();
+
     };
 });
 
@@ -95,41 +132,21 @@ $(window).resize(function () {
     if( w <= 768){
         //news.htmlのお知らせリストのnextとprevをクリックしたとき
 
-        $(".next").click(function(){
-            $("#news_list .pageWrap").animate({
-                "margin-left" : parseInt($("#news_list .pageWrap").css("margin-left"))-340+"px"
-            },400);
-        })
-        
-        $(".prev").click(function(){
-            $("#news_list .pageWrap").animate({
-                "margin-left" : parseInt($("#news_list .pageWrap").css("margin-left"))+340+"px"
-            },400);
-        })
-
-        //news.htmlのお知らせリストのnextとprev終了
 
         //windowサイズ768以下で固定メニューの動作　関数
         smartPhoneMenu();
 
+        //windowサイズ768以下でお知らせ一覧の.next,.prev動作　関数
+        newsListSmartPhone();
+
     }else if( w >= 768){
-        //news.htmlのお知らせリストのnextとprevをクリックしたとき
-        $(".next").click(function(){
-            $("#news_list .pageWrap").animate({
-                "margin-left" : parseInt($("#news_list .pageWrap").css("margin-left"))-420+"px"
-            },400);
-        })
         
-        $(".prev").click(function(){
-            $("#news_list .pageWrap").animate({
-                "margin-left" : parseInt($("#news_list .pageWrap").css("margin-left"))+420+"px"
-            },400);
-        })
-        
-    //news.htmlのお知らせリストのnextとprev終了
 
     //windowサイズ768px以上でトップへ戻るの動作　関数
     tabletUp();
+
+    //windowサイズ768以以上でお知らせ一覧の.next,.prev動作　関数
+    newsListTablet();
 
     }
 })
